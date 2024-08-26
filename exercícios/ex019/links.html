@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited{
+            color: rgb(173, 6, 6);
+        }
+
+         a:hover{
+            color: rgb(255, 122, 122);
+        }
+
+        a:active{
+            color: yellow;
+        }
+
+        .especial{
+            background-color: bisque;
+        }
+
+        .especial::before{
+            content: '⇒';
+        }
+
+        .especial::after{
+            content: '⇐';
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://www.twitch.tv/eskimozin" target="_blank" class="especial">Twitch do eskimozin</a></li>
+        <li><a href="https://www.youtube.com/@eskimozincraft" target="_blank" class="especial">Canal do eskimozin</a></li>
+    </ul>
+</body>
+</html>
