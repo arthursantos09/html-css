@@ -12,6 +12,14 @@
         table{
             border-collapse: collapse;
             width: 600px;
+            position: relative;
+        }
+
+        caption{
+            background-color: rgba(128, 128, 128, 0.453);
+            font-size: 1.3em;
+            padding: 10px;
+            font-weight: bold;
         }
 
         thead, tfoot{
@@ -19,9 +27,17 @@
             color: white;
         }
 
+        thead{
+            position: sticky;
+            top: -1px;
+}
         td, th{
             border: 1px solid black;
             padding: 10px;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
         }
 
         .num{
@@ -30,11 +46,13 @@
     </style>
 </head>
 <body>
+    <h1>Tabelas maiores</h1>
     <table>
+        <caption>População de cada estado</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 140px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -149,7 +167,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>População total</th>
+                <th scope="row">População total</th>
                 <td class="num"><strong>212 583 720</strong></td>
             </tr>
         </tfoot>
